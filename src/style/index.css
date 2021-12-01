@@ -64,9 +64,9 @@
   }
   
   .dropdown:hover .dropdown-content{
-    height:52px;
+    height:48px;
   }
 
-  .dropdown-top:hover{
+  .dropdown-top{
     border-bottom: 1px solid black;
   }
