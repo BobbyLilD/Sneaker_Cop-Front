@@ -1,35 +1,28 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <NavBar />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <div class="dropdown">
+      <div class="dropdown-top">
+      <img alt="Logo" src="./assets/logo.png" />
+      </div>
+      <div class="dropdown-content">
+        <NavBar />
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
 import NavBar from "./components/NavBar.vue"
+import "./style/index.css"
 
 export default {
   name: "App",
   components: {
-    HelloWorld,
     NavBar
   },
 };
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-
-img{
-  max-width: 400px;
-}
+@import './style/index.css';
 </style>
