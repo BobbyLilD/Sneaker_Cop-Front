@@ -17,6 +17,12 @@
                 REQUESTS
             </button>
         </router-link>
+
+        <router-link class="nav-link">
+            <button class="nav-btn">
+                OPTIONS
+            </button>
+        </router-link>
     </div>
 </template>
 
@@ -27,5 +33,5 @@ export default {
 </script>
 
 <style>
-@import '../style/index.css';
+@import '../assets/index.css';
 </style>

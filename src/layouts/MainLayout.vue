@@ -1,28 +1,27 @@
 <template>
-  <div id="app">
+  <div class="main-layout">
     <div class="dropdown">
       <div class="dropdown-top">
-      <img alt="Logo" src="./assets/logo.png" />
+        <img alt="Logo" src="./assets/logo.png" />
       </div>
       <div class="dropdown-content">
         <NavBar />
       </div>
     </div>
+    <div class="page-container">
+        <router-view/>
+    </div>
   </div>
 </template>
 
 <script>
-import NavBar from "./components/NavBar.vue"
-import "./style/index.css"
-
+import NavBar from "@/components/NavBar.vue";
 export default {
-  name: "App",
+  name: "main-layout",
   components: {
-    NavBar
+    NavBar,
   },
 };
 </script>
 
-<style>
-@import './assets/index.css';
-</style>
+<style></style>
