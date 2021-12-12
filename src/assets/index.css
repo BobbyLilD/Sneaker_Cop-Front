@@ -1,0 +1,174 @@
+@font-face {
+    font-family: 'Meedori Sans';
+    src: url('./fonts/subset-MeedoriSansRegular.eot');
+    src: url('./fonts/subset-MeedoriSansRegular.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/subset-MeedoriSansRegular.woff2') format('woff2'),
+        url('./fonts/subset-MeedoriSansRegular.woff') format('woff'),
+        url('./fonts/subset-MeedoriSansRegular.ttf') format('truetype'),
+        url('./fonts/subset-MeedoriSansRegular.svg#MeedoriSansRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+#nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 4px 0px;
+}
+.nav-btn{
+    width: 100%;
+    padding: 8px 24px;
+    border: none;
+    background-color:white;
+    font-family: 'Meedori Sans';
+    font-size: 16pt;
+}
+.nav-link{
+    flex-grow: 1;
+}
+#feed_img{
+    max-width: 60px;
+}
+#requests_img{
+    max-width: 120px;
+}
+
+#app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 30px;
+  }
+  
+  img{
+    max-width: 400px;
+  }
+  .dropdown{
+    display: inline-block;
+    position: relative;
+    width: 100%;
+  
+  }
+  
+  .dropdown-content{
+    width: 100%;
+    z-index: 1;
+    overflow: hidden;  
+    height: 0px;
+    transition: all 0.3s ease-in;
+    border-bottom: 1px solid black;
+  }
+  
+  .dropdown:hover .dropdown-content{
+    height:48px;
+  }
+
+  .dropdown-top{
+    border-bottom: 1px solid black;
+  }
+
+  .login-form, .registration-form{
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 100px;
+    border: 1px solid black;
+    padding: 12px;
+  }
+
+  .registration-form {
+    height: 300px;
+  }
+
+  .form-field {
+    padding: 0px 40px;
+  }
+
+  .form-field input {
+    margin-top: 8px;
+    width: 100%;
+  }
+
+  .form-field label{
+    font-family: 'Meedori Sans';
+  }
+
+  .item-list{
+    /* display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(28%, max-content));
+    grid-gap: 0px 20px; */
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .item-card {
+    border: 2px solid black;
+    margin-top: 8px;
+    font-weight: bold;
+    color: white;
+    background-color: black;
+
+
+    
+  }
+
+  .item-title, .item-brand {
+    margin: 4px 0px;
+    /* font-size: 14pt; */
+  }
+
+  .submit-btn {
+    font-family: 'Meedori Sans';
+    background-color: white;
+    border: 1px solid black;
+    padding: 4px 8px;
+    font-size: 12pt;
+  }
+
+  .action-link {
+    margin-top: 4px;
+    font-size: 8pt;
+  }
+
+  .action-link a {
+    text-decoration: underline;
+  }
+
+  .item-link{
+    background-color: transparent;
+    border: none;
+  }
+
+  .image-section {
+    margin-top: 20px;
+    width: 66%;
+  }
+
+  .product-image{
+    margin: 4px 8px;
+  }
+
+  .item-page{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .info-section {
+    margin-top: 20px;
+    width: 33%;
+    border-left: 2px solid black;
+  }
+
+  .info-section h1{
+    border-bottom: 1px solid black;
+  }

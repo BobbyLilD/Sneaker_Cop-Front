@@ -1,28 +1,28 @@
 <template>
   <div id="app">
-    <div class="dropdown">
-      <div class="dropdown-top">
-      <img alt="Logo" src="./assets/logo.png" />
-      </div>
-      <div class="dropdown-content">
-        <NavBar />
-      </div>
-    </div>
+    <component :is="layout">
+      <router-view/>
+    </component>
   </div>
 </template>
 
 <script>
-import NavBar from "./components/NavBar.vue"
-import "./style/index.css"
+import MainLayout from "@/layouts/MainLayout.vue"
+import AuthLayout from "@/layouts/AuthLayout.vue"
 
 export default {
   name: "App",
   components: {
-    NavBar
+    MainLayout,
+    AuthLayout
   },
+  computed: {
+    layout() {
+      return this.$route.meta?.layout
+    }
+  }
 };
 </script>
 
 <style>
-@import './style/index.css';
 </style>
