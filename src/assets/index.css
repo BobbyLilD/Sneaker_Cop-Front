@@ -41,7 +41,7 @@
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
-    margin-top: 30px;
+    margin-top: 60px;
   }
   
   img{
@@ -68,107 +68,5 @@
   }
 
   .dropdown-top{
-    border-bottom: 1px solid black;
-  }
-
-  .login-form, .registration-form{
-    height: 250px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 300px;
-    margin: 0 auto;
-    margin-top: 100px;
-    border: 1px solid black;
-    padding: 12px;
-  }
-
-  .registration-form {
-    height: 300px;
-  }
-
-  .form-field {
-    padding: 0px 40px;
-  }
-
-  .form-field input {
-    margin-top: 8px;
-    width: 100%;
-  }
-
-  .form-field label{
-    font-family: 'Meedori Sans';
-  }
-
-  .item-list{
-    /* display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(28%, max-content));
-    grid-gap: 0px 20px; */
-
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-  }
-
-  .item-card {
-    border: 2px solid black;
-    margin-top: 8px;
-    font-weight: bold;
-    color: white;
-    background-color: black;
-
-
-    
-  }
-
-  .item-title, .item-brand {
-    margin: 4px 0px;
-    /* font-size: 14pt; */
-  }
-
-  .submit-btn {
-    font-family: 'Meedori Sans';
-    background-color: white;
-    border: 1px solid black;
-    padding: 4px 8px;
-    font-size: 12pt;
-  }
-
-  .action-link {
-    margin-top: 4px;
-    font-size: 8pt;
-  }
-
-  .action-link a {
-    text-decoration: underline;
-  }
-
-  .item-link{
-    background-color: transparent;
-    border: none;
-  }
-
-  .image-section {
-    margin-top: 20px;
-    width: 66%;
-  }
-
-  .product-image{
-    margin: 4px 8px;
-  }
-
-  .item-page{
-    display: flex;
-    flex-direction: row;
-  }
-
-  .info-section {
-    margin-top: 20px;
-    width: 33%;
-    border-left: 2px solid black;
-  }
-
-  .info-section h1{
     border-bottom: 1px solid black;
   }
