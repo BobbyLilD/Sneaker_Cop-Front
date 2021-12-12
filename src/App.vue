@@ -25,8 +25,4 @@ export default {
 </script>
 
 <style>
-<<<<<<< HEAD
-=======
-@import './assets/index.css';
->>>>>>> a57c9d27a8fbd25f26d0eaf748333cda7aa164e9
 </style>
