@@ -70,3 +70,99 @@
   .dropdown-top{
     border-bottom: 1px solid black;
   }
+
+  .login-form, .registration-form{
+    height: 270px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border: 1px solid black;
+    width: 250px;
+    margin: 40px auto;
+  }
+
+  .registration-form{
+    height: 320px;
+  }
+
+  .form-field label, .form-field button {
+    font-family: "Meedori Sans";
+  }
+
+  .form-field input{
+    margin-top: 8px;
+    width: 80%;
+  }
+
+  .submit-btn{
+    background-color: transparent;
+    border: 1px solid black;
+    padding: 8px 12px;
+  }
+
+  .action-link{
+    margin-top: 8px;
+    font-size: 8pt;
+  }
+
+  .action-link a{
+    text-decoration: underline;
+  }
+
+  .item-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .item-card{
+    border: 2px solid black;
+    border-left: 1px;
+    border-right: 1px;
+    margin: 8px 0px;
+    background-color: black;
+    color: white;
+    font-size: 14pt;
+  }
+
+  .item-card button{
+    background-color: transparent;
+    border: none;
+  }
+
+  .item-title, .item-brand {
+    margin-top: 2px;
+  }
+
+  /* .router-link-active .nav-btn{
+    background-color: black;
+    color: white;
+  }  */
+
+  .image-section{
+    flex: 66%;
+    margin-top: 20px;
+  }
+
+  .product-image{
+    margin: 4px 12px;
+  }
+
+  .info-section{
+    flex: 33%;
+    border-left: 2px solid black;
+    margin-top: 20px;
+  }
+
+  .info-section h1{
+    border-bottom: 1px solid black;
+    text-align: center;
+    margin: 16px 0px;
+    padding: 0px 8px;
+  }
+
+  .item-page{
+    display: flex;
+    flex-direction: row;
+  }
