@@ -1,61 +1,82 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
+import Vue from "vue";
+import VueRouter from "vue-router";
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const routes = [
-   {
-      path: "/",
-      name: "feed-page",
-      meta: {
-      title: 'Feed',
-      layout: 'main-layout'
-      },
-      component: () => import("@/pages/FeedPage.vue"),
-   },
-   {
-     path: "/login",
-     name: "login-page",
-     meta: {
-       title: 'Login',
-       layout: 'auth-layout'
-     },
-     component: () => import("@/pages/LoginPage.vue"),
-   },
-   {
+  {
+    path: "/",
+    name: "feed-page",
+    meta: {
+      title: "Feed",
+      layout: "main-layout",
+    },
+    component: () => import("@/pages/FeedPage.vue"),
+  },
+  {
+    path: "/login",
+    name: "login-page",
+    meta: {
+      title: "Login",
+      layout: "auth-layout",
+    },
+    component: () => import("@/pages/LoginPage.vue"),
+  },
+  {
     path: "/registration",
     name: "registration-page",
     meta: {
-      title: 'Register',
-      layout: 'auth-layout'
+      title: "Register",
+      layout: "auth-layout",
     },
     component: () => import("@/pages/RegistrationPage.vue"),
-   },
-   {
+  },
+  {
     path: "/item/:id",
     name: "item-page",
     meta: {
-      title: 'Item',
-      layout: 'main-layout'
+      title: "Item",
+      layout: "main-layout",
     },
     component: () => import("@/pages/ItemPage.vue"),
-   },
-]
+  },
+  {
+    path: "/wishlist",
+    name: "wishlist-page",
+    meta: {
+      title: "Wishlist",
+      layout: "main-layout",
+    },
+    component: () => import("@/pages/WishPage.vue"),
+  },
+  {
+    path: "/options",
+    name: "options-page",
+    meta: {
+      title: "Options",
+      layout: "main-layout",
+    },
+    component: () => import("@/pages/OptionsPage.vue"),
+  },
+];
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: "history",
   base: process.env.BASE_URL,
-  routes
-})
+  routes,
+});
 
 router.beforeEach((to, from, next) => {
-  const {accessToken} = localStorage;
-  if(accessToken || to.name === 'login-page' || to.name === 'registration-page') {
-    next()
+  const { accessToken } = localStorage;
+  if (
+    accessToken ||
+    to.name === "login-page" ||
+    to.name === "registration-page"
+  ) {
+    next();
   } else {
-    next('/login');
+    next("/login");
   }
-})
+});
 
-
-export default router
+export default router;

@@ -155,14 +155,142 @@
     margin-top: 20px;
   }
 
-  .info-section h1{
+  .info-section .top-info{
     border-bottom: 1px solid black;
     text-align: center;
-    margin: 16px 0px;
+    margin-top: 32px;
     padding: 0px 8px;
   }
 
   .item-page{
     display: flex;
     flex-direction: row;
+    color: black;
   }
+
+  .offer-selector{
+    background-color: black;
+    color: white;
+    margin-top: 50px;
+  }
+
+
+  .selector-dropdown{
+    /* display: inline-block;
+    position: relative; */
+    width: 100%;
+  }
+
+  .selector-dropdown-content{
+    margin-top: -18px;
+    width: 100%;
+    z-index: 1;
+    overflow: hidden;  
+    height: 0px;
+    transition: all 0.3s ease-in;
+    border-top: 1px solid white;
+  }
+
+  .selector-dropdown:hover .selector-dropdown-content{
+    height: fit-content;
+  }
+
+  .selector-dropdown-top{
+    border-bottom: 1px solid black;
+  }
+
+  .store-name{
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    font-size: 14pt;
+    color: inherit;
+  }
+
+  .size-sheet{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .size-tile{
+    border: 1px solid white;
+    min-width: 30%;
+    flex: 1;
+    height: 50px;
+  }
+
+  .store-link{
+    text-align: center;
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid white;
+    color: inherit;
+    font-family: "Meedori Sans";
+    font-size: 18pt;
+    padding: 2px 0px;
+  }
+
+  .wishlist-btn{
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    margin-top: 50px;
+    font-family: "Meedori Sans";
+    font-size: 18pt;
+  }
+
+.options-page {
+  color: black;
+}
+
+.about-info {
+  border-bottom: 1px solid black;
+}
+
+.info-title {
+  text-align: left;
+  margin-top: 12px;
+  margin-left: 40px;
+  font-size: 18pt;
+}
+
+.about-info-line{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin: 16px 0px 6px 60px;
+}
+
+.about-info-line-title{
+  font-family: "Meedori Sans";
+  font-size: 14pt;
+}
+
+.about-info-line-text{
+  margin-left: 16px;
+  margin-top: 4px;
+  font-size: 12pt;
+}
+
+.info-top{
+  font-family: "Meedori Sans";
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.info-edit-btn {
+  background-color: transparent;
+  border: 1px solid black;
+  font-family: "Meedori Sans";
+  padding: 0px 8px;
+  font-size: 18pt;
+  margin-top: 4px;
+}
+
+#not-done{
+  text-decoration: line-through;
+}

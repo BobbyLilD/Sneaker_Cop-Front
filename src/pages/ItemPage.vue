@@ -9,21 +9,33 @@
             class="product-image">
         </section>
         <section class="info-section">
-            <h1>{{Item.name}}</h1>
-            <h1>{{Item.brand}}</h1>
+            <h1 class="top-info">{{Item.name}}</h1>
+            <h1 class="top-info">{{Item.brand}}</h1>
+            <OfferSelector class="offer-selector" v-bind:Offers="Item.offers"/>
+            <button @click="onWishClick" class="wishlist-btn">{{this.wished.value}}</button>
         </section>
     </div>
 </template>
 
 <script>
+import OfferSelector from "@/components/OfferSelector.vue"
 import {fetchItemByID} from "@/netClient/itemService"
+import {createWish, deleteWish} from "@/netClient/wishService"
 export default {
     name: 'item-page',
     data: () => ({
-        Item: {}
+        Item: {},
+        wished: {
+            value: ""
+        }
     }),
     async created(){
         await this.fillItemInfo();
+        if(this.Item.wish == false){
+            this.wished.value = "ADD TO WISHLIST";
+        } else{
+            this.wished.value = "DELETE FROM WISHLIST";
+        }
     },
     methods: {
         async fillItemInfo(){
@@ -33,7 +45,25 @@ export default {
                 console.error(error);
                 throw error;
             }
+        }, async onWishClick(){
+            try {
+                if(this.Item.wish == false){
+                    await createWish(this.Item.id);
+                    this.Item.wish = true;
+                    this.wished.value = "DELETE FROM WISHLIST";
+                } else{
+                    this.Item.wish = false;
+                    await deleteWish(this.Item.id);
+                    this.wished.value = "ADD TO WISHLIST";
+                }
+            } catch (error) {
+                console.error(error);
+                throw error;
+            }
         }
+    },
+    components: {
+        OfferSelector
     }
 }
 </script>

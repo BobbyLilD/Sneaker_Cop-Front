@@ -4,12 +4,16 @@
       <button class="nav-btn">FEED</button>
     </router-link>
 
-    <router-link to="/" class="nav-link">
+    <router-link to="/wishlist" class="nav-link">
       <button class="nav-btn">WISHLIST</button>
     </router-link>
 
     <router-link to="/" class="nav-link">
-      <button class="nav-btn">REQUESTS</button>
+      <button class="nav-btn" id="not-done">REQUESTS</button>
+    </router-link>
+
+    <router-link to="/options" class="nav-link">
+      <button class="nav-btn">OPTIONS</button>
     </router-link>
 
     <div class="nav-link">
