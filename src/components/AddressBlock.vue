@@ -2,26 +2,50 @@
   <section class="about-info">
     <div class="info-top">
       <div class="info-title">ADRESSES</div>
-      <button class="info-edit-btn">ADD</button>
+      <button class="info-edit-btn" @click="onAddClick">ADD</button>
     </div>
-    <div class="info-block">
-      <div class="about-info-line">
-        <span class="about-info-line-title">NAME: </span>
-        <span class="about-info-line-text">{{ User.name }}</span>
-      </div>
-      <div class="about-info-line">
-        <span class="about-info-line-title">EMAIL: </span>
-        <span class="about-info-line-text">{{ User.email }}</span>
-      </div>
-    </div>
+    <AddressInfoBlock 
+    v-for="address in User.addresses"
+    :key="address.id"
+    v-bind:Address="address"
+    @addressDeleted="onDeleteAddress"
+    />
+    <AddressAddBlock 
+    v-if="add" 
+    @closeBlock="onClose"
+    @addressCreated="onCreateAddress"/>
   </section>
 </template>
 
 <script>
+import AddressAddBlock from "@/components/AddressAddBlock.vue";
+import AddressInfoBlock from "@/components/AddressInfoBlock.vue";
 export default {
     name: "AddressBlock",
+    data: () => ({
+      add: false
+    }),
     props: {
         User: Object
+    },
+    components: {
+      AddressAddBlock,
+      AddressInfoBlock
+    },
+    methods: {
+      onAddClick(){
+        this.add = true;
+      },
+      onClose(){
+        this.add = false;
+      },
+      onCreateAddress(){
+        this.add = false;
+        this.$emit("addressCreated", {});
+      },
+      onDeleteAddress(){
+        this.$emit('addressDeleted', {});
+      }
     }
 };
 </script>
